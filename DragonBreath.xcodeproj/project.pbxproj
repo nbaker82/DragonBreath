@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A001 /* DragonBreathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001 /* DragonBreathApp.swift */; };
+		A002 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B002 /* Models.swift */; };
+		A003 /* WorkoutSeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003 /* WorkoutSeeder.swift */; };
+		A004 /* BTWBImportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004 /* BTWBImportService.swift */; };
+		A005 /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005 /* WorkoutViewModel.swift */; };
+		A006 /* LiftLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006 /* LiftLogViewModel.swift */; };
+		A007 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B007 /* ContentView.swift */; };
+		A010 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B010 /* HistoryView.swift */; };
+		A011 /* BTWBImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B011 /* BTWBImportView.swift */; };
+		ED4FB610307C693B00B1C7AE /* LiftRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FB60F307C693B00B1C7AE /* LiftRepository.swift */; };
+		ED4FB612307C693F00B1C7AE /* WorkoutRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FB611307C693F00B1C7AE /* WorkoutRepository.swift */; };
+		ED9354902F70203400343FF9 /* CustomWorkoutBuilderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93548D2F70203400343FF9 /* CustomWorkoutBuilderView.swift */; };
+		ED9354912F70203400343FF9 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED93548E2F70203400343FF9 /* DashboardView.swift */; };
+		ED9A00312F8806C300F9F60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED9A00302F8806C300F9F60C /* LaunchScreen.storyboard */; };
+		EDC974352F772C3A009FF39D /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974322F772C3A009FF39D /* WorkoutDetailView.swift */; };
+		EDC974362F772C3A009FF39D /* AddWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974302F772C3A009FF39D /* AddWorkoutView.swift */; };
+		EDC974372F772C3A009FF39D /* WorkoutFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974332F772C3A009FF39D /* WorkoutFilterView.swift */; };
+		EDC974382F772C3A009FF39D /* WorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974342F772C3A009FF39D /* WorkoutListView.swift */; };
+		EDC974392F772C3A009FF39D /* LogWorkoutResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974312F772C3A009FF39D /* LogWorkoutResultView.swift */; };
+		EDC9743D2F772C5F009FF39D /* LiftLogDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9743A2F772C5F009FF39D /* LiftLogDetailView.swift */; };
+		EDC9743E2F772C5F009FF39D /* LogLiftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9743C2F772C5F009FF39D /* LogLiftView.swift */; };
+		EDC9743F2F772C5F009FF39D /* LiftLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9743B2F772C5F009FF39D /* LiftLogListView.swift */; };
+		EDC974422F772C6A009FF39D /* LiftHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974402F772C6A009FF39D /* LiftHistoryView.swift */; };
+		EDC974432F772C6A009FF39D /* WorkoutHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974412F772C6A009FF39D /* WorkoutHistoryView.swift */; };
+		EDC974462F772C82009FF39D /* QuickLogWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974452F772C82009FF39D /* QuickLogWorkoutView.swift */; };
+		EDC974472F772C82009FF39D /* FitnessRankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974442F772C82009FF39D /* FitnessRankView.swift */; };
+		EDC9744E2F772CF2009FF39D /* DragonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974482F772CF2009FF39D /* DragonTheme.swift */; };
+		EDC9744F2F772CF2009FF39D /* StatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9744A2F772CF2009FF39D /* StatCard.swift */; };
+		EDC974502F772CF2009FF39D /* WorkoutTypeBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9744B2F772CF2009FF39D /* WorkoutTypeBanner.swift */; };
+		EDC974512F772CF2009FF39D /* WorkoutTypeChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC9744C2F772CF2009FF39D /* WorkoutTypeChip.swift */; };
+		EDC974522F772CF2009FF39D /* MovementPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974492F772CF2009FF39D /* MovementPickerSheet.swift */; };
+		EDC974542F780000009FF39D /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974532F780000009FF39D /* AppIconView.swift */; };
+		EDC974582F772D84009FF39D /* PercentileLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974552F772D84009FF39D /* PercentileLogic.swift */; };
+		EDC974592F772D84009FF39D /* ModelConformances.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974542F772D84009FF39D /* ModelConformances.swift */; };
+		EDC9745A2F772D84009FF39D /* LiftFilterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974532F772D84009FF39D /* LiftFilterLogic.swift */; };
+		EDC9745B2F772D84009FF39D /* WorkoutFilterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC974562F772D84009FF39D /* WorkoutFilterLogic.swift */; };
+		EDC9745D2F772E53009FF39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC9745C2F772E53009FF39D /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B001 /* DragonBreathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBreathApp.swift; sourceTree = "<group>"; };
+		B002 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B003 /* WorkoutSeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSeeder.swift; sourceTree = "<group>"; };
+		B004 /* BTWBImportService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTWBImportService.swift; sourceTree = "<group>"; };
+		B005 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
+		B006 /* LiftLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogViewModel.swift; sourceTree = "<group>"; };
+		B007 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B010 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		B011 /* BTWBImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTWBImportView.swift; sourceTree = "<group>"; };
+		C001 /* DragonBreath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBreath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4FB60F307C693B00B1C7AE /* LiftRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftRepository.swift; sourceTree = "<group>"; };
+		ED4FB611307C693F00B1C7AE /* WorkoutRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRepository.swift; sourceTree = "<group>"; };
+		ED7D6B6E2F83F7830095F8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ED93548D2F70203400343FF9 /* CustomWorkoutBuilderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWorkoutBuilderView.swift; sourceTree = "<group>"; };
+		ED93548E2F70203400343FF9 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		ED9A00302F8806C300F9F60C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EDC974302F772C3A009FF39D /* AddWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutView.swift; sourceTree = "<group>"; };
+		EDC974312F772C3A009FF39D /* LogWorkoutResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWorkoutResultView.swift; sourceTree = "<group>"; };
+		EDC974322F772C3A009FF39D /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		EDC974332F772C3A009FF39D /* WorkoutFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFilterView.swift; sourceTree = "<group>"; };
+		EDC974342F772C3A009FF39D /* WorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListView.swift; sourceTree = "<group>"; };
+		EDC9743A2F772C5F009FF39D /* LiftLogDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogDetailView.swift; sourceTree = "<group>"; };
+		EDC9743B2F772C5F009FF39D /* LiftLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftLogListView.swift; sourceTree = "<group>"; };
+		EDC9743C2F772C5F009FF39D /* LogLiftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLiftView.swift; sourceTree = "<group>"; };
+		EDC974402F772C6A009FF39D /* LiftHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftHistoryView.swift; sourceTree = "<group>"; };
+		EDC974412F772C6A009FF39D /* WorkoutHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutHistoryView.swift; sourceTree = "<group>"; };
+		EDC974442F772C82009FF39D /* FitnessRankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessRankView.swift; sourceTree = "<group>"; };
+		EDC974452F772C82009FF39D /* QuickLogWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickLogWorkoutView.swift; sourceTree = "<group>"; };
+		EDC974482F772CF2009FF39D /* DragonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonTheme.swift; sourceTree = "<group>"; };
+		EDC974492F772CF2009FF39D /* MovementPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementPickerSheet.swift; sourceTree = "<group>"; };
+		EDC9744A2F772CF2009FF39D /* StatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCard.swift; sourceTree = "<group>"; };
+		EDC9744B2F772CF2009FF39D /* WorkoutTypeBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeBanner.swift; sourceTree = "<group>"; };
+		EDC9744C2F772CF2009FF39D /* WorkoutTypeChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTypeChip.swift; sourceTree = "<group>"; };
+		EDC974532F772D84009FF39D /* LiftFilterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftFilterLogic.swift; sourceTree = "<group>"; };
+		EDC974532F780000009FF39D /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
+		EDC974542F772D84009FF39D /* ModelConformances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConformances.swift; sourceTree = "<group>"; };
+		EDC974552F772D84009FF39D /* PercentileLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentileLogic.swift; sourceTree = "<group>"; };
+		EDC974562F772D84009FF39D /* WorkoutFilterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFilterLogic.swift; sourceTree = "<group>"; };
+		EDC9745C2F772E53009FF39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E001 = {
+			isa = PBXGroup;
+			children = (
+				E002 /* DragonBreath */,
+				E010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E002 /* DragonBreath */ = {
+			isa = PBXGroup;
+			children = (
+				ED7D6B6E2F83F7830095F8BE /* Info.plist */,
+				EDC9745C2F772E53009FF39D /* Assets.xcassets */,
+				EDC974572F772D84009FF39D /* Logic */,
+				E003 /* App */,
+				E004 /* Models */,
+				E005 /* ViewModels */,
+				E006 /* Views */,
+				E007 /* Services */,
+				ED4FB60C307C692500B1C7AE /* Repositories */,
+			);
+			path = DragonBreath;
+			sourceTree = "<group>";
+		};
+		E003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B001 /* DragonBreathApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E004 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B002 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E005 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B005 /* WorkoutViewModel.swift */,
+				B006 /* LiftLogViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDC9744D2F772CF2009FF39D /* Shared */,
+				ED93548F2F70203400343FF9 /* Dashboard */,
+				B007 /* ContentView.swift */,
+				E008 /* Workouts */,
+				E009 /* Lifts */,
+				E011 /* History */,
+				E012 /* Import */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E007 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B003 /* WorkoutSeeder.swift */,
+				B004 /* BTWBImportService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E008 /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				EDC974302F772C3A009FF39D /* AddWorkoutView.swift */,
+				EDC974312F772C3A009FF39D /* LogWorkoutResultView.swift */,
+				EDC974322F772C3A009FF39D /* WorkoutDetailView.swift */,
+				EDC974332F772C3A009FF39D /* WorkoutFilterView.swift */,
+				EDC974342F772C3A009FF39D /* WorkoutListView.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		E009 /* Lifts */ = {
+			isa = PBXGroup;
+			children = (
+				EDC9743A2F772C5F009FF39D /* LiftLogDetailView.swift */,
+				EDC9743B2F772C5F009FF39D /* LiftLogListView.swift */,
+				EDC9743C2F772C5F009FF39D /* LogLiftView.swift */,
+			);
+			path = Lifts;
+			sourceTree = "<group>";
+		};
+		E010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C001 /* DragonBreath.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E011 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				EDC974402F772C6A009FF39D /* LiftHistoryView.swift */,
+				EDC974412F772C6A009FF39D /* WorkoutHistoryView.swift */,
+				B010 /* HistoryView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		E012 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				B011 /* BTWBImportView.swift */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		ED4FB60C307C692500B1C7AE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				ED4FB60F307C693B00B1C7AE /* LiftRepository.swift */,
+				ED4FB611307C693F00B1C7AE /* WorkoutRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		ED93548F2F70203400343FF9 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				EDC974442F772C82009FF39D /* FitnessRankView.swift */,
+				EDC974452F772C82009FF39D /* QuickLogWorkoutView.swift */,
+				ED93548D2F70203400343FF9 /* CustomWorkoutBuilderView.swift */,
+				ED93548E2F70203400343FF9 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		EDC9744D2F772CF2009FF39D /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				EDC974482F772CF2009FF39D /* DragonTheme.swift */,
+				EDC974532F780000009FF39D /* AppIconView.swift */,
+				EDC974492F772CF2009FF39D /* MovementPickerSheet.swift */,
+				EDC9744A2F772CF2009FF39D /* StatCard.swift */,
+				EDC9744B2F772CF2009FF39D /* WorkoutTypeBanner.swift */,
+				EDC9744C2F772CF2009FF39D /* WorkoutTypeChip.swift */,
+				ED9A00302F8806C300F9F60C /* LaunchScreen.storyboard */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		EDC974572F772D84009FF39D /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				EDC974532F772D84009FF39D /* LiftFilterLogic.swift */,
+				EDC974542F772D84009FF39D /* ModelConformances.swift */,
+				EDC974552F772D84009FF39D /* PercentileLogic.swift */,
+				EDC974562F772D84009FF39D /* WorkoutFilterLogic.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F001 /* DragonBreath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G001 /* Build configuration list for PBXNativeTarget "DragonBreath" */;
+			buildPhases = (
+				H001 /* Sources */,
+				D001 /* Frameworks */,
+				H002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragonBreath;
+			productName = DragonBreath;
+			productReference = C001 /* DragonBreath.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ROOT /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					New,
+				);
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					F001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = G002 /* Build configuration list for PBXProject "DragonBreath" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E001;
+			packageReferences = (
+				ED3C9859307DBCA40008BB13 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
+			productRefGroup = E010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F001 /* DragonBreath */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		H002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDC9745D2F772E53009FF39D /* Assets.xcassets in Resources */,
+				ED9A00312F8806C300F9F60C /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		H001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A001 /* DragonBreathApp.swift in Sources */,
+				A002 /* Models.swift in Sources */,
+				A003 /* WorkoutSeeder.swift in Sources */,
+				A004 /* BTWBImportService.swift in Sources */,
+				A005 /* WorkoutViewModel.swift in Sources */,
+				A006 /* LiftLogViewModel.swift in Sources */,
+				ED4FB610307C693B00B1C7AE /* LiftRepository.swift in Sources */,
+				A007 /* ContentView.swift in Sources */,
+				A010 /* HistoryView.swift in Sources */,
+				EDC9743D2F772C5F009FF39D /* LiftLogDetailView.swift in Sources */,
+				EDC9743E2F772C5F009FF39D /* LogLiftView.swift in Sources */,
+				EDC974462F772C82009FF39D /* QuickLogWorkoutView.swift in Sources */,
+				EDC974472F772C82009FF39D /* FitnessRankView.swift in Sources */,
+				EDC9743F2F772C5F009FF39D /* LiftLogListView.swift in Sources */,
+				ED9354902F70203400343FF9 /* CustomWorkoutBuilderView.swift in Sources */,
+				ED9354912F70203400343FF9 /* DashboardView.swift in Sources */,
+				EDC974422F772C6A009FF39D /* LiftHistoryView.swift in Sources */,
+				EDC974432F772C6A009FF39D /* WorkoutHistoryView.swift in Sources */,
+				EDC9744E2F772CF2009FF39D /* DragonTheme.swift in Sources */,
+				EDC974542F780000009FF39D /* AppIconView.swift in Sources */,
+				EDC9744F2F772CF2009FF39D /* StatCard.swift in Sources */,
+				EDC974502F772CF2009FF39D /* WorkoutTypeBanner.swift in Sources */,
+				EDC974582F772D84009FF39D /* PercentileLogic.swift in Sources */,
+				EDC974592F772D84009FF39D /* ModelConformances.swift in Sources */,
+				EDC9745A2F772D84009FF39D /* LiftFilterLogic.swift in Sources */,
+				EDC9745B2F772D84009FF39D /* WorkoutFilterLogic.swift in Sources */,
+				EDC974512F772CF2009FF39D /* WorkoutTypeChip.swift in Sources */,
+				EDC974522F772CF2009FF39D /* MovementPickerSheet.swift in Sources */,
+				A011 /* BTWBImportView.swift in Sources */,
+				EDC974352F772C3A009FF39D /* WorkoutDetailView.swift in Sources */,
+				EDC974362F772C3A009FF39D /* AddWorkoutView.swift in Sources */,
+				EDC974372F772C3A009FF39D /* WorkoutFilterView.swift in Sources */,
+				EDC974382F772C3A009FF39D /* WorkoutListView.swift in Sources */,
+				ED4FB612307C693F00B1C7AE /* WorkoutRepository.swift in Sources */,
+				EDC974392F772C3A009FF39D /* LogWorkoutResultView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		I001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		I002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		I003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DragonBreath/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dragonbreath.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		I004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DragonBreath/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dragonbreath.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		G001 /* Build configuration list for PBXNativeTarget "DragonBreath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				I003 /* Debug */,
+				I004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		G002 /* Build configuration list for PBXProject "DragonBreath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				I001 /* Debug */,
+				I002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED3C9859307DBCA40008BB13 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = ROOT /* Project object */;
+}
