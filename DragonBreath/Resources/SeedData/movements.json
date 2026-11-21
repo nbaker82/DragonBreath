@@ -1,0 +1,1039 @@
+[
+  {
+    "name": "Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Power Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hang Power Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hang Squat Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "High Hang Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Snatch Pull",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Snatch Balance",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Muscle Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Drop Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pause Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Tempo Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Block Snatch",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Overhead Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pause Overhead Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Power Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hang Power Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hang Squat Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "High Hang Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Clean Pull",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pause Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Tempo Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Block Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Tall Clean",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Clean & Jerk",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Split Jerk",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Push Jerk",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Push Press",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pause Jerk",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Behind-Neck Jerk",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Back Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Front Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pause Back Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pause Front Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Box Squat",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Air Squat",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Deadlift",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sumo Deadlift",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Deficit Deadlift",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Romanian Deadlift",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Halting Deadlift",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Eccentric Deadlift",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sumo Deadlift High Pull",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Strict Press",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Thruster",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Bench Press",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Incline Bench Press",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Cluster",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Bear Complex",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Macho Man Complex",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Wall Ball",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Good Morning",
+    "category": "Weightlifting",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Strict Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Weighted Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Chest-to-Bar Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Strict Chest-to-Bar",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Commando Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "L-Sit Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Ring Row",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Ring Muscle-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Bar Muscle-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Strict Muscle-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Push-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Ring Dip",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Strict Ring Dip",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Weighted Ring Dip",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dip",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Handstand Push-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Strict Handstand Push-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Deficit Handstand Push-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Handstand Walk",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Distance",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Wall Walk",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Toes-to-Bar",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Knees-to-Elbows",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sit-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "GHD Sit-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hip Extension",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "L-Sit",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Time",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hollow Hold",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Time"
+    ]
+  },
+  {
+    "name": "Rope Climb",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Legless Rope Climb",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pegboard",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Box Jump",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Height",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Box Jump Over",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Height",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Broad Jump",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Distance",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Pistol Squat",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Burpee",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Bar-Facing Burpee",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Lateral Burpee",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Burpee Box Jump",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Burpee Pull-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Hand-Release Push-up",
+    "category": "Gymnastics",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Run",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time"
+    ]
+  },
+  {
+    "name": "Row",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time"
+    ]
+  },
+  {
+    "name": "Double-Under",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Single-Under",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Reps"
+    ]
+  },
+  {
+    "name": "Assault Bike",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Echo Bike",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Ski Erg",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time"
+    ]
+  },
+  {
+    "name": "Bike Erg",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time"
+    ]
+  },
+  {
+    "name": "Swim",
+    "category": "Monostructural",
+    "scoreTypes": [
+      "Distance",
+      "Time"
+    ]
+  },
+  {
+    "name": "Kettlebell Swing (American)",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Swing (Russian)",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Snatch",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Clean",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Thruster",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Goblet Squat",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Turkish Get-up",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Farmer Carry",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Distance"
+    ]
+  },
+  {
+    "name": "Kettlebell Overhead Squat",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Kettlebell Push Jerk",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Snatch",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Clean",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Thruster",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Bench Press",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Row",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Lunge",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Devil Press",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Man Maker",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Dumbbell Farmer Carry",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Distance"
+    ]
+  },
+  {
+    "name": "DB Overhead Walking Lunge",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sandbag Clean",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sandbag Carry",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Distance"
+    ]
+  },
+  {
+    "name": "Sandbag Over Shoulder",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sandbag Squat",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Sandbag Run",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Distance"
+    ]
+  },
+  {
+    "name": "Yoke Carry",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Distance"
+    ]
+  },
+  {
+    "name": "Sled Push",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Distance"
+    ]
+  },
+  {
+    "name": "Atlas Stone",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Medicine Ball",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Battle Ropes",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Time",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Wreckbag",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  },
+  {
+    "name": "Log Clean & Press",
+    "category": "Strongman",
+    "scoreTypes": [
+      "Weight (lbs/kg)",
+      "Reps"
+    ]
+  }
+]

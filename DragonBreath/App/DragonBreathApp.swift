@@ -4,6 +4,7 @@ import SwiftData
 @main
 struct DragonBreathApp: App {
     let container: ModelContainer
+    @AppStorage(AppAppearance.storageKey) private var appearance: AppAppearance = .system
 
     init() {
         do {
@@ -26,6 +27,9 @@ struct DragonBreathApp: App {
                 .modelContainer(container)
                 .environment(WorkoutRepository(context: container.mainContext))
                 .environment(LiftRepository(context: container.mainContext))
+                .onChange(of: appearance, initial: true) { _, newValue in
+                    newValue.applyToWindows()
+                }
         }
     }
 }
