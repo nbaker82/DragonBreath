@@ -1,0 +1,563 @@
+[
+  {
+    "name": "Fran",
+    "type": "For Time",
+    "description": "21-15-9 reps for time:\nThrusters (95/65 lbs)\nPull-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Thruster",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Helen",
+    "type": "Rounds For Time",
+    "description": "3 rounds for time:\n400m Run\n21 Kettlebell Swings (53/35 lbs)\n12 Pull-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Run",
+      "Kettlebell Swing (American)",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Annie",
+    "type": "For Time",
+    "description": "50-40-30-20-10 reps for time:\nDouble-Unders\nSit-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Double-Under",
+      "Sit-up"
+    ]
+  },
+  {
+    "name": "Diane",
+    "type": "For Time",
+    "description": "21-15-9 reps for time:\nDeadlift (225/155 lbs)\nHandstand Push-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Deadlift",
+      "Handstand Push-up"
+    ]
+  },
+  {
+    "name": "Grace",
+    "type": "For Time",
+    "description": "30 Clean & Jerks (135/95 lbs) for time",
+    "isBenchmark": true,
+    "movements": [
+      "Clean & Jerk"
+    ]
+  },
+  {
+    "name": "Isabel",
+    "type": "For Time",
+    "description": "30 Snatches (135/95 lbs) for time",
+    "isBenchmark": true,
+    "movements": [
+      "Snatch"
+    ]
+  },
+  {
+    "name": "Nancy",
+    "type": "Rounds For Time",
+    "description": "5 rounds for time:\n400m Run\n15 Overhead Squats (95/65 lbs)",
+    "isBenchmark": true,
+    "movements": [
+      "Run",
+      "Overhead Squat"
+    ]
+  },
+  {
+    "name": "Amanda",
+    "type": "For Time",
+    "description": "9-7-5 reps for time:\nMuscle-ups\nSnatches (135/95 lbs)",
+    "isBenchmark": true,
+    "movements": [
+      "Ring Muscle-up",
+      "Snatch"
+    ]
+  },
+  {
+    "name": "Elizabeth",
+    "type": "For Time",
+    "description": "21-15-9 reps for time:\nCleans (135/95 lbs)\nRing Dips",
+    "isBenchmark": true,
+    "movements": [
+      "Clean",
+      "Ring Dip"
+    ]
+  },
+  {
+    "name": "Jackie",
+    "type": "For Time",
+    "description": "For time:\n1000m Row\n50 Thrusters (45/35 lbs)\n30 Pull-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Row",
+      "Thruster",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Kelly",
+    "type": "Rounds For Time",
+    "description": "5 rounds for time:\n400m Run\n30 Box Jumps (24/20 in)\n30 Wall Balls (20/14 lbs)",
+    "isBenchmark": true,
+    "movements": [
+      "Run",
+      "Box Jump",
+      "Wall Ball"
+    ]
+  },
+  {
+    "name": "Barbara",
+    "type": "Rounds For Time",
+    "description": "5 rounds for time:\n20 Pull-ups\n30 Push-ups\n40 Sit-ups\n50 Air Squats\n(3 min rest between rounds)",
+    "isBenchmark": true,
+    "movements": [
+      "Pull-up",
+      "Push-up",
+      "Sit-up",
+      "Air Squat"
+    ]
+  },
+  {
+    "name": "Chelsea",
+    "type": "EMOM",
+    "description": "30 minute EMOM:\n5 Pull-ups\n10 Push-ups\n15 Air Squats",
+    "timeCap": 1800,
+    "isBenchmark": true,
+    "movements": [
+      "Pull-up",
+      "Push-up",
+      "Air Squat"
+    ]
+  },
+  {
+    "name": "Cindy",
+    "type": "AMRAP",
+    "description": "20 minute AMRAP:\n5 Pull-ups\n10 Push-ups\n15 Air Squats",
+    "timeCap": 1200,
+    "isBenchmark": true,
+    "movements": [
+      "Pull-up",
+      "Push-up",
+      "Air Squat"
+    ]
+  },
+  {
+    "name": "DT",
+    "type": "Rounds For Time",
+    "description": "5 rounds for time:\n12 Deadlifts (155/105 lbs)\n9 Hang Power Cleans (155/105 lbs)\n6 Push Jerks (155/105 lbs)",
+    "isBenchmark": true,
+    "movements": [
+      "Deadlift",
+      "Hang Power Clean",
+      "Push Jerk"
+    ]
+  },
+  {
+    "name": "Linda",
+    "type": "For Time",
+    "description": "10-9-8-7-6-5-4-3-2-1 reps for time:\nDeadlift (1.5x BW)\nBench Press (BW)\nClean (0.75x BW)",
+    "isBenchmark": true,
+    "movements": [
+      "Deadlift",
+      "Bench Press",
+      "Clean"
+    ]
+  },
+  {
+    "name": "Nasty Girls",
+    "type": "Rounds For Time",
+    "description": "3 rounds for time:\n50 Air Squats\n7 Muscle-ups\n10 Hang Power Cleans (135/95 lbs)",
+    "isBenchmark": true,
+    "movements": [
+      "Air Squat",
+      "Ring Muscle-up",
+      "Hang Power Clean"
+    ]
+  },
+  {
+    "name": "Angie",
+    "type": "For Time",
+    "description": "For time:\n100 Pull-ups\n100 Push-ups\n100 Sit-ups\n100 Air Squats",
+    "isBenchmark": true,
+    "movements": [
+      "Pull-up",
+      "Push-up",
+      "Sit-up",
+      "Air Squat"
+    ]
+  },
+  {
+    "name": "Nate",
+    "type": "AMRAP",
+    "description": "20 minute AMRAP:\n2 Muscle-ups\n4 Handstand Push-ups\n8 Kettlebell Swings (70/53 lbs)",
+    "timeCap": 1200,
+    "isBenchmark": true,
+    "movements": [
+      "Ring Muscle-up",
+      "Handstand Push-up",
+      "Kettlebell Swing (American)"
+    ]
+  },
+  {
+    "name": "J.T.",
+    "type": "For Time",
+    "description": "21-15-9 reps for time:\nHandstand Push-ups\nRing Dips\nPush-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Handstand Push-up",
+      "Ring Dip",
+      "Push-up"
+    ]
+  },
+  {
+    "name": "Fight Gone Bad",
+    "type": "AMRAP",
+    "description": "3 rounds, 1 minute at each station:\nWall Balls (20/14 lbs, 10 ft)\nSumo Deadlift High Pull (75/55 lbs)\nBox Jumps (20 in)\nPush Press (75/55 lbs)\nRow (calories)\n(1 min rest between rounds)",
+    "timeCap": 1020,
+    "isBenchmark": true,
+    "movements": [
+      "Wall Ball",
+      "Sumo Deadlift High Pull",
+      "Box Jump",
+      "Push Press",
+      "Row"
+    ]
+  },
+  {
+    "name": "Heartbreak Kid",
+    "type": "For Time",
+    "description": "4 rounds for time:\n1000m Row\n50 Burpees\n50 Box Jumps (24/20 in)",
+    "isBenchmark": true,
+    "movements": [
+      "Row",
+      "Burpee",
+      "Box Jump"
+    ]
+  },
+  {
+    "name": "Bell",
+    "type": "For Time",
+    "description": "For time:\n21-15-9 reps of:\nKettlebell Swings (70/53 lbs)\nPull-ups",
+    "isBenchmark": true,
+    "movements": [
+      "Kettlebell Swing (American)",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Gwen",
+    "type": "Strength",
+    "description": "15-12-9 reps (touch and go) Clean & Jerk\nUnbroken sets only. Rest as needed between sets.\nScore is highest load.",
+    "isBenchmark": true,
+    "movements": [
+      "Clean & Jerk"
+    ]
+  },
+  {
+    "name": "Murph",
+    "type": "For Time",
+    "description": "For time:\n1 mile Run\n100 Pull-ups\n200 Push-ups\n300 Air Squats\n1 mile Run\n(Partition pull-ups, push-ups, and squats as needed.\nStart and finish with the run.)\nWith 20 lb vest / body armor.",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Pull-up",
+      "Push-up",
+      "Air Squat"
+    ]
+  },
+  {
+    "name": "Chad",
+    "type": "For Time",
+    "description": "For time:\n1000 Box Step-ups (20 in)\nWith 45 lb ruck",
+    "isHero": true,
+    "movements": [
+      "Box Jump Over"
+    ]
+  },
+  {
+    "name": "Severin",
+    "type": "For Time",
+    "description": "For time:\n1 mile Run\n50 Burpees\n50 Knees-to-Elbows\n50 Box Jumps (24/20 in)\n50 Kettlebell Swings (53/35 lbs)\n50 Pull-ups\n1 mile Run",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Burpee",
+      "Knees-to-Elbows",
+      "Box Jump",
+      "Kettlebell Swing (American)",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Maxton",
+    "type": "For Time",
+    "description": "For time:\n1 mile Run\n100 Pull-ups\n200 Push-ups\n300 Air Squats\n1 mile Run\nWith 20 lb vest.",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Pull-up",
+      "Push-up",
+      "Air Squat"
+    ]
+  },
+  {
+    "name": "Glen",
+    "type": "For Time",
+    "description": "For time:\n30 Clean & Jerks (135/95 lbs)\n1 mile Run\n10 Muscle-ups\n100 Squats\n20 Handstand Push-ups",
+    "isHero": true,
+    "movements": [
+      "Clean & Jerk",
+      "Run",
+      "Ring Muscle-up",
+      "Air Squat",
+      "Handstand Push-up"
+    ]
+  },
+  {
+    "name": "Daniel",
+    "type": "For Time",
+    "description": "For time:\n50 Pull-ups\n400m Run\n21 Thrusters (95/65 lbs)\n800m Run\n21 Power Cleans (135/95 lbs)\n800m Run\n21 Handstand Push-ups\n400m Run\n50 Pull-ups",
+    "isHero": true,
+    "movements": [
+      "Pull-up",
+      "Run",
+      "Thruster",
+      "Power Clean",
+      "Handstand Push-up"
+    ]
+  },
+  {
+    "name": "Ralph",
+    "type": "For Time",
+    "description": "5 rounds for time:\n400m Run\n20 Thrusters (45/35 lbs)\n20 Pull-ups",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Thruster",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Tillman",
+    "type": "Rounds For Time",
+    "description": "7 rounds for time:\n7 Front Squats (185/130 lbs)\n7 Burpee Pull-ups\n200m Sprint\n(Rest 1 min between rounds)",
+    "isHero": true,
+    "movements": [
+      "Front Squat",
+      "Burpee Pull-up",
+      "Run"
+    ]
+  },
+  {
+    "name": "McGhee",
+    "type": "Rounds For Time",
+    "description": "30 minute AMRAP:\n5 Burpees\n5 Power Cleans (135/95 lbs)",
+    "timeCap": 1800,
+    "isHero": true,
+    "movements": [
+      "Burpee",
+      "Power Clean"
+    ]
+  },
+  {
+    "name": "Holbrook",
+    "type": "For Time",
+    "description": "For time:\n50 Burpees\n400m Run\n50 Burpees",
+    "isHero": true,
+    "movements": [
+      "Burpee",
+      "Run"
+    ]
+  },
+  {
+    "name": "Bradley",
+    "type": "Rounds For Time",
+    "description": "10 rounds for time:\n100m Sprint\n10 Pull-ups\n10 Burpees",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Pull-up",
+      "Burpee"
+    ]
+  },
+  {
+    "name": "Jerry",
+    "type": "For Time",
+    "description": "For time:\n1 mile Run\n2000m Row\n1 mile Run",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Row"
+    ]
+  },
+  {
+    "name": "Roy",
+    "type": "Rounds For Time",
+    "description": "5 rounds for time:\n15 Deadlifts (225/155 lbs)\n20 Box Jumps (24/20 in)\n25 Pull-ups",
+    "isHero": true,
+    "movements": [
+      "Deadlift",
+      "Box Jump",
+      "Pull-up"
+    ]
+  },
+  {
+    "name": "Wittman",
+    "type": "Rounds For Time",
+    "description": "7 rounds for time:\n15 Pull-ups\n20 Kettlebell Swings (53/35 lbs)\n30 Double-Unders",
+    "isHero": true,
+    "movements": [
+      "Pull-up",
+      "Kettlebell Swing (American)",
+      "Double-Under"
+    ]
+  },
+  {
+    "name": "Donny",
+    "type": "Rounds For Time",
+    "description": "4 rounds for time:\n400m Run\n20 Pull-ups\n20 Handstand Push-ups\n20 Toes-to-Bar",
+    "isHero": true,
+    "movements": [
+      "Run",
+      "Pull-up",
+      "Handstand Push-up",
+      "Toes-to-Bar"
+    ]
+  },
+  {
+    "name": "Del",
+    "type": "Rounds For Time",
+    "description": "7 rounds for time:\n7 Muscle-ups\n7 Deadlifts (250/185 lbs)",
+    "isHero": true,
+    "movements": [
+      "Ring Muscle-up",
+      "Deadlift"
+    ]
+  },
+  {
+    "name": "Omar",
+    "type": "Rounds For Time",
+    "description": "6 rounds for time:\n10 Snatches (135/95 lbs)\n12 Box Jumps (36/30 in)\n6 Bar Muscle-ups",
+    "isHero": true,
+    "movements": [
+      "Snatch",
+      "Box Jump",
+      "Bar Muscle-up"
+    ]
+  },
+  {
+    "name": "Rankel",
+    "type": "AMRAP",
+    "description": "20 minute AMRAP:\n6 Deadlifts (225/155 lbs)\n7 Burpee Pull-ups\n10 Kettlebell Swings (70/53 lbs)",
+    "timeCap": 1200,
+    "isHero": true,
+    "movements": [
+      "Deadlift",
+      "Burpee Pull-up",
+      "Kettlebell Swing (American)"
+    ]
+  },
+  {
+    "name": "Jack",
+    "type": "AMRAP",
+    "description": "20 minute AMRAP:\n10 Push Press (115/85 lbs)\n10 Kettlebell Swings (53/35 lbs)\n10 Box Jumps (24/20 in)",
+    "timeCap": 1200,
+    "isHero": true,
+    "movements": [
+      "Push Press",
+      "Kettlebell Swing (American)",
+      "Box Jump"
+    ]
+  },
+  {
+    "name": "G.I. Jane",
+    "type": "For Time",
+    "description": "100 Burpee Pull-ups for time",
+    "isHero": true,
+    "movements": [
+      "Burpee Pull-up"
+    ]
+  },
+  {
+    "name": "Always Remembered",
+    "type": "Rounds For Time",
+    "description": "8 rounds for time:\n11 Thrusters (95/65 lbs)\n11 Box Jumps (30/24 in)\n11 Power Cleans (95/65 lbs)",
+    "isHero": true,
+    "movements": [
+      "Thruster",
+      "Box Jump",
+      "Power Clean"
+    ]
+  },
+  {
+    "name": "Bergeron Beep Test",
+    "type": "EMOM",
+    "description": "Every minute on the minute:\n7 Thrusters (75/55 lbs)\n7 Pull-ups\n7 Burpees\nContinue until failure.",
+    "isBenchmark": true,
+    "movements": [
+      "Thruster",
+      "Pull-up",
+      "Burpee"
+    ]
+  },
+  {
+    "name": "The Ghost",
+    "type": "Intervals",
+    "description": "6 rounds:\n1 minute Assault Bike\n1 minute Rest\n1 minute Row\n1 minute Rest\n1 minute Run\n1 minute Rest\nScore = total calories/meters",
+    "isBenchmark": true,
+    "movements": [
+      "Assault Bike",
+      "Row",
+      "Run"
+    ]
+  },
+  {
+    "name": "Loredo",
+    "type": "Rounds For Time",
+    "description": "6 rounds for time:\n24 Air Squats\n24 Push-ups\n24 Walking Lunges\n400m Run",
+    "isBenchmark": true,
+    "movements": [
+      "Air Squat",
+      "Push-up",
+      "Run"
+    ]
+  },
+  {
+    "name": "Rahoi",
+    "type": "AMRAP",
+    "description": "12 minute AMRAP:\n12 Box Jumps (24/20 in)\n6 Thrusters (95/65 lbs)\n6 Bar-Facing Burpees",
+    "timeCap": 720,
+    "isBenchmark": true,
+    "movements": [
+      "Box Jump",
+      "Thruster",
+      "Bar-Facing Burpee"
+    ]
+  },
+  {
+    "name": "Cement Mixer",
+    "type": "Rounds For Time",
+    "description": "3 rounds for time:\n21 Overhead Squats (95/65 lbs)\n21 Pull-ups\n200m Farmers Carry (53/35 lbs each)",
+    "isBenchmark": true,
+    "movements": [
+      "Overhead Squat",
+      "Pull-up",
+      "Kettlebell Farmer Carry"
+    ]
+  },
+  {
+    "name": "Ingrid",
+    "type": "For Time",
+    "description": "For time:\n30 Snatches (135/95 lbs)\n30 Clean & Jerks (135/95 lbs)",
+    "isBenchmark": true,
+    "movements": [
+      "Snatch",
+      "Clean & Jerk"
+    ]
+  }
+]
