@@ -8,6 +8,9 @@ struct DashboardView: View {
 
     @State private var showLogWorkout = false
     @State private var showCustomBuilder = false
+    @State private var showImport = false
+    @State private var showIconExport = false
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     private var monthResults: [WorkoutResult] {
         allResults.filter { Calendar.current.isDate($0.date, equalTo: Date(), toGranularity: .month) }
@@ -32,9 +35,9 @@ struct DashboardView: View {
             }
         }
         return [
-            CategoryStat(label: "Bodyweight", count: bodyweight, color: .brand),
+            CategoryStat(label: "Bodyweight", count: bodyweight, color: .teal),
             CategoryStat(label: "Cardio",     count: cardio,     color: .blue),
-            CategoryStat(label: "Strength",   count: strength,   color: .red)
+            CategoryStat(label: "Strength",   count: strength,   color: .purple)
         ]
     }
 
@@ -60,7 +63,11 @@ struct DashboardView: View {
                     RankCardView(workoutCount: allResults.count, liftCount: allLiftLogs.count)
                         .padding(.horizontal)
 
-                    HStack(spacing: 12) {
+                    // Three across fits standard sizes; accessibility sizes stack them full width.
+                    let statLayout = dynamicTypeSize.isAccessibilitySize
+                        ? AnyLayout(VStackLayout(spacing: 12))
+                        : AnyLayout(HStackLayout(alignment: .top, spacing: 12))
+                    statLayout {
                         StatCard(title: "WODs This Month", value: "\(monthResults.count)")
                         StatCard(title: "Lift Sessions",   value: "\(monthLiftLogs.count)")
                         StatCard(title: "Rx Rate",         value: rxRate)
@@ -79,24 +86,29 @@ struct DashboardView: View {
             }
             .navigationTitle(monthTitle)
             .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Menu {
-                        Button {
-                            showLogWorkout = true
-                        } label: {
-                            Label("Log What I Did", systemImage: "pencil.and.list.clipboard")
-                        }
-                        Button {
-                            showCustomBuilder = true
-                        } label: {
-                            Label("Generate Workout", systemImage: "hammer")
-                        }
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title3)
-                            .tint(Color.brand)
+                ToolbarItem(placement: .topBarLeading) {
+                    Menu("Options", systemImage: "ellipsis.circle") {
+                        Button("Import from btwb", systemImage: "square.and.arrow.down", action: presentImport)
+                        #if DEBUG
+                        Button("Export App Icon", systemImage: "app", action: presentIconExport)
+                        #endif
                     }
                 }
+                ToolbarItem(placement: .primaryAction) {
+                    Menu {
+                        Button("Log What I Did", systemImage: "pencil.and.list.clipboard", action: presentLogWorkout)
+                        Button("Generate Workout", systemImage: "hammer", action: presentCustomBuilder)
+                    } label: {
+                        Label("Add Workout", systemImage: "plus.circle.fill")
+                            .font(.title3)
+                    }
+                }
+            }
+            .sheet(isPresented: $showImport) {
+                BTWBImportView()
+            }
+            .sheet(isPresented: $showIconExport) {
+                AppIconExportView()
             }
             .sheet(isPresented: $showLogWorkout) {
                 QuickLogWorkoutView()
@@ -107,14 +119,21 @@ struct DashboardView: View {
         }
     }
 
+    private func presentImport() { showImport = true }
+    private func presentIconExport() { showIconExport = true }
+    private func presentLogWorkout() { showLogWorkout = true }
+    private func presentCustomBuilder() { showCustomBuilder = true }
+
     private var rxRate: String {
         guard !monthResults.isEmpty else { return "—" }
         let rxCount = monthResults.filter { $0.rx }.count
         return "\(Int((Double(rxCount) / Double(monthResults.count)) * 100))%"
     }
 
+    /// "November 2026", shortened to "Nov 2026" at accessibility sizes so the large title isn't truncated.
     private var monthTitle: String {
-        Date().formatted(.dateTime.month(.wide).year())
+        let month: Date.FormatStyle.Symbol.Month = dynamicTypeSize.isAccessibilitySize ? .abbreviated : .wide
+        return Date().formatted(.dateTime.month(month).year())
     }
 }
 

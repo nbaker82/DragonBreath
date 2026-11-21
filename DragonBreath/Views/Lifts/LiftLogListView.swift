@@ -69,7 +69,7 @@ struct LiftLogRowView: View {
 
             HStack(spacing: 12) {
                 if let max = log.maxWeight {
-                    Label("\(Int(max)) \(log.unit.rawValue)", systemImage: "arrow.up.circle.fill")
+                    Label("\(max.formatted()) \(log.unit.rawValue)", systemImage: "arrow.up.circle.fill")
                         .font(.caption)
                         .foregroundStyle(Color.brand)
                 }

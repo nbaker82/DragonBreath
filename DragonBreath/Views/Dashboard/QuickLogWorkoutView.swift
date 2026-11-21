@@ -23,6 +23,12 @@ struct QuickLogWorkoutView: View {
     @State private var weight = ""
     @State private var totalReps = ""
 
+    @FocusState private var focusedField: Field?
+
+    enum Field: Hashable {
+        case timeMinutes, timeSeconds, rounds, repsRemainder, weight, totalReps, workoutName, notes
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -81,16 +87,17 @@ struct QuickLogWorkoutView: View {
                 scoreSection
 
                 Section("Details") {
-                    TextField("Workout name (optional)", text: $workoutName)
+                    TextField("Workout name (optional)", text: $workoutName).focused($focusedField, equals: .workoutName)
                     DatePicker("Date", selection: $date, displayedComponents: .date)
                     Toggle("Rx", isOn: $rx)
                 }
 
                 Section("Notes") {
-                    TextField("How did it feel? Any notes…", text: $notes, axis: .vertical)
+                    TextField("How did it feel? Any notes…", text: $notes, axis: .vertical).focused($focusedField, equals: .notes)
                         .lineLimit(3...6)
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Log What I Did")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -98,8 +105,13 @@ struct QuickLogWorkoutView: View {
                     Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") { save() }
-                        .fontWeight(.semibold)
+                    Button("Save", action: save)
+                        .disabled(secondsAreInvalid)
+                }
+                // Number pads have no return key, so give them an explicit way out.
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done", action: dismissKeyboard)
                 }
             }
             .sheet(isPresented: $showMovementPicker) {
@@ -115,31 +127,36 @@ struct QuickLogWorkoutView: View {
             Section {
                 HStack(spacing: 16) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("MIN").font(.caption2).foregroundStyle(.secondary)
-                        TextField("00", text: $timeMinutes)
+                        Text("MIN").font(.caption).foregroundStyle(.secondary)
+                        TextField("00", text: $timeMinutes).focused($focusedField, equals: .timeMinutes).accessibilityLabel("Minutes")
                             .keyboardType(.numberPad)
                             .font(.title2.monospacedDigit())
                     }
                     Text(":").font(.title2.bold()).foregroundStyle(.secondary)
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("SEC").font(.caption2).foregroundStyle(.secondary)
-                        TextField("00", text: $timeSeconds)
+                        Text("SEC").font(.caption).foregroundStyle(.secondary)
+                        TextField("00", text: $timeSeconds).focused($focusedField, equals: .timeSeconds).accessibilityLabel("Seconds")
                             .keyboardType(.numberPad)
                             .font(.title2.monospacedDigit())
                     }
                 }
                 .padding(.vertical, 4)
             } header: { Text("Finishing Time") } footer: {
-                Text("Log the time it took you to finish.")
+                if secondsAreInvalid {
+                    Label("Seconds must be between 0 and 59.", systemImage: "exclamationmark.triangle.fill")
+                        .foregroundStyle(.red)
+                } else {
+                    Text("Log the time it took you to finish.")
+                }
             }
 
         case .amrap:
             Section {
                 LabeledContent("Rounds") {
-                    TextField("0", text: $rounds).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $rounds).focused($focusedField, equals: .rounds).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
                 LabeledContent("Extra Reps") {
-                    TextField("0", text: $repsRemainder).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $repsRemainder).focused($focusedField, equals: .repsRemainder).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 Text("AMRAP in \(timeCap) min — log total complete rounds + any extra reps.")
@@ -148,10 +165,10 @@ struct QuickLogWorkoutView: View {
         case .emom:
             Section {
                 LabeledContent("Rounds Completed") {
-                    TextField("0", text: $rounds).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $rounds).focused($focusedField, equals: .rounds).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
                 LabeledContent("Extra Reps") {
-                    TextField("0", text: $repsRemainder).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $repsRemainder).focused($focusedField, equals: .repsRemainder).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 Text("EMOM — \(timeCap) rounds total. Log how many intervals you completed successfully.")
@@ -160,7 +177,7 @@ struct QuickLogWorkoutView: View {
         case .tabata:
             Section {
                 LabeledContent("Total Reps") {
-                    TextField("0", text: $totalReps).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $totalReps).focused($focusedField, equals: .totalReps).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 Text("Tabata: 8 rounds × 20 sec on / 10 sec off. Log total reps across all rounds.")
@@ -169,10 +186,10 @@ struct QuickLogWorkoutView: View {
         case .deathBy:
             Section {
                 LabeledContent("Rounds Reached") {
-                    TextField("0", text: $rounds).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $rounds).focused($focusedField, equals: .rounds).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
                 LabeledContent("Reps in Final Round") {
-                    TextField("0", text: $repsRemainder).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $repsRemainder).focused($focusedField, equals: .repsRemainder).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 Text("Log the last round you completed + reps into your failed round.")
@@ -181,13 +198,13 @@ struct QuickLogWorkoutView: View {
         case .maxLoad, .strength, .complex:
             Section {
                 LabeledContent("Weight (lbs)") {
-                    TextField("0", text: $weight).keyboardType(.decimalPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $weight).focused($focusedField, equals: .weight).keyboardType(.decimalPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Best Load") }
 
         default:
             Section("Score / Notes") {
-                TextField("Describe your result…", text: $notes, axis: .vertical)
+                TextField("Describe your result…", text: $notes, axis: .vertical).focused($focusedField, equals: .notes)
                     .lineLimit(2...4)
             }
         }
@@ -198,6 +215,15 @@ struct QuickLogWorkoutView: View {
         case .amrap, .emom, .forTime, .rft, .chipper, .tabata, .intervals, .deathBy: return true
         default: return false
         }
+    }
+
+    /// Only time scores have a seconds field; 0–59 is the valid range.
+    private var secondsAreInvalid: Bool {
+        [.forTime, .rft, .chipper].contains(workoutType) && (Int(timeSeconds) ?? 0) > 59
+    }
+
+    private func dismissKeyboard() {
+        focusedField = nil
     }
 
     private func save() {
@@ -232,7 +258,7 @@ struct QuickLogWorkoutView: View {
             totalRepsInt = Int(totalReps)
             scoreType = .reps
         case .maxLoad, .strength, .complex:
-            weightDouble = Double(weight)
+            weightDouble = try? Double(weight, format: .number)
             scoreType = .weight
         default:
             scoreType = .reps

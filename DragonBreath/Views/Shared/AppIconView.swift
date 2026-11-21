@@ -119,7 +119,7 @@ struct AppIconExportView: View {
                         .font(.headline)
                         .padding(.horizontal, 32)
                         .padding(.vertical, 12)
-                        .background(Color.brand)
+                        .background(Color.brandFill)
                         .foregroundStyle(.white)
                         .clipShape(Capsule())
                 }
@@ -131,7 +131,7 @@ struct AppIconExportView: View {
                         .font(.headline)
                         .padding(.horizontal, 32)
                         .padding(.vertical, 12)
-                        .background(Color.brand)
+                        .background(Color.brandFill)
                         .foregroundStyle(.white)
                         .clipShape(Capsule())
                 }

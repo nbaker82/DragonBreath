@@ -160,7 +160,9 @@ final class WorkoutResult {
         case .weight:
             return weight.map { "\(Int($0)) lbs" } ?? "-"
         case .reps:
-            return totalReps.map { "\($0) reps" } ?? "-"
+            // Free-form scores (Intervals, Custom, unparsed imports) are stored in notes.
+            if let totalReps { return "\(totalReps) reps" }
+            return notes.isEmpty ? "-" : notes
         default:
             return notes
         }
@@ -174,7 +176,7 @@ final class LiftLog {
     var id: UUID
     var movement: Movement?
     var date: Date
-    var sets: [LiftSet]
+    @Relationship(deleteRule: .cascade) var sets: [LiftSet] = []
     var notes: String
     var unit: WeightUnit
     var programType: StrengthProgram?
@@ -201,6 +203,11 @@ final class LiftLog {
 
     var maxWeight: Double? {
         sets.compactMap { $0.weight }.max()
+    }
+
+    /// Max weight converted to `target`, so logs entered in different units can be compared.
+    func maxWeight(in target: WeightUnit) -> Double? {
+        maxWeight.map { unit.convert($0, to: target) }
     }
 
     var totalVolume: Double {

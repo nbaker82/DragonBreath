@@ -13,11 +13,12 @@ struct WorkoutTypeBanner: View {
                 .frame(width: 44, height: 44)
                 .background(color)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 2) {
                 Text(workout.workoutType.rawValue.uppercased())
                     .font(.caption.bold())
-                    .foregroundStyle(color)
+                    .foregroundStyle(.secondary)
                 Text(typeDescription)
                     .font(.subheadline)
                     .foregroundStyle(.primary)

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct WorkoutHistoryView: View {
     let results: [WorkoutResult]
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var grouped: [(String, [WorkoutResult])] {
         let dict = Dictionary(grouping: results) { r in
@@ -13,7 +14,10 @@ struct WorkoutHistoryView: View {
     var body: some View {
         List {
             Section {
-                HStack(spacing: 20) {
+                // Stack the stat cards at accessibility sizes so they aren't squeezed.
+                (dynamicTypeSize.isAccessibilitySize
+                    ? AnyLayout(VStackLayout(spacing: 12))
+                    : AnyLayout(HStackLayout(alignment: .top, spacing: 20))) {
                     StatCard(title: "Total WODs", value: "\(results.count)")
                     StatCard(title: "Unique WODs", value: "\(grouped.count)")
                     StatCard(title: "Rx Rate", value: rxRate)

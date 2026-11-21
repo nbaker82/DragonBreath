@@ -113,7 +113,7 @@ struct WorkoutResultRowView: View {
 
     private func percentileBg(_ result: WorkoutResult) -> Color {
         let p = vm.percentile(for: result)
-        if p >= 1.0 { return .yellow.opacity(0.2) }
+        if p >= 1.0 { return .brandGold.opacity(0.15) }
         if p >= 0.9 { return .green.opacity(0.15) }
         if p >= 0.75 { return .blue.opacity(0.15) }
         return .gray.opacity(0.1)

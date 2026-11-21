@@ -16,6 +16,12 @@ struct LogWorkoutResultView: View {
     @State private var notes: String = ""
     @State private var rx: Bool = true
 
+    @FocusState private var focusedField: Field?
+
+    enum Field: Hashable {
+        case minutes, seconds, rounds, reps, weight, totalReps, notes
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -33,10 +39,11 @@ struct LogWorkoutResultView: View {
                 scoreSection
 
                 Section("Notes") {
-                    TextField("Optional notes...", text: $notes, axis: .vertical)
+                    TextField("Optional notes...", text: $notes, axis: .vertical).focused($focusedField, equals: .notes)
                         .lineLimit(3...6)
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Log Result")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -44,8 +51,13 @@ struct LogWorkoutResultView: View {
                     Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") { save() }
-                        .fontWeight(.semibold)
+                    Button("Save", action: save)
+                        .disabled(secondsAreInvalid)
+                }
+                // Number pads have no return key, so give them an explicit way out.
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done", action: dismissKeyboard)
                 }
             }
         }
@@ -58,16 +70,16 @@ struct LogWorkoutResultView: View {
             Section {
                 HStack(spacing: 12) {
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("MIN").font(.caption2).foregroundStyle(.secondary)
-                        TextField("00", text: $minutes)
+                        Text("MIN").font(.caption).foregroundStyle(.secondary)
+                        TextField("00", text: $minutes).focused($focusedField, equals: .minutes).accessibilityLabel("Minutes")
                             .keyboardType(.numberPad)
                             .font(.title2.monospacedDigit())
                             .frame(maxWidth: .infinity)
                     }
                     Text(":").font(.title2.bold()).foregroundStyle(.secondary)
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("SEC").font(.caption2).foregroundStyle(.secondary)
-                        TextField("00", text: $seconds)
+                        Text("SEC").font(.caption).foregroundStyle(.secondary)
+                        TextField("00", text: $seconds).focused($focusedField, equals: .seconds).accessibilityLabel("Seconds")
                             .keyboardType(.numberPad)
                             .font(.title2.monospacedDigit())
                             .frame(maxWidth: .infinity)
@@ -75,16 +87,21 @@ struct LogWorkoutResultView: View {
                 }
                 .padding(.vertical, 4)
             } header: { Text("Finishing Time") } footer: {
-                if let cap = workout.timeCap { Text("Time cap: \(cap / 60) minutes") }
+                if secondsAreInvalid {
+                    Label("Seconds must be between 0 and 59.", systemImage: "exclamationmark.triangle.fill")
+                        .foregroundStyle(.red)
+                } else if let cap = workout.timeCap {
+                    Text("Time cap: \(cap / 60) minutes")
+                }
             }
 
         case .amrap:
             Section {
                 LabeledContent("Rounds") {
-                    TextField("0", text: $rounds).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $rounds).focused($focusedField, equals: .rounds).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
                 LabeledContent("Extra Reps") {
-                    TextField("0", text: $reps).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $reps).focused($focusedField, equals: .reps).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 if let cap = workout.timeCap {
@@ -95,10 +112,10 @@ struct LogWorkoutResultView: View {
         case .emom:
             Section {
                 LabeledContent("Rounds Completed") {
-                    TextField("0", text: $rounds).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $rounds).focused($focusedField, equals: .rounds).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
                 LabeledContent("Extra Reps") {
-                    TextField("0", text: $reps).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $reps).focused($focusedField, equals: .reps).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 if let cap = workout.timeCap { Text("EMOM — \(cap / 60) rounds total. Log how many intervals you completed.") }
@@ -108,7 +125,7 @@ struct LogWorkoutResultView: View {
         case .tabata:
             Section {
                 LabeledContent("Total Reps") {
-                    TextField("0", text: $totalReps).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $totalReps).focused($focusedField, equals: .totalReps).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 Text("Tabata: 8 rounds of 20 sec on / 10 sec off. Log total reps across all rounds.")
@@ -117,10 +134,10 @@ struct LogWorkoutResultView: View {
         case .deathBy:
             Section {
                 LabeledContent("Rounds Reached") {
-                    TextField("0", text: $rounds).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $rounds).focused($focusedField, equals: .rounds).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
                 LabeledContent("Reps in Final Round") {
-                    TextField("0", text: $reps).keyboardType(.numberPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $reps).focused($focusedField, equals: .reps).keyboardType(.numberPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Score") } footer: {
                 Text("Death By: log the last round you completed + reps into your failed round.")
@@ -129,15 +146,24 @@ struct LogWorkoutResultView: View {
         case .maxLoad, .strength, .complex:
             Section {
                 LabeledContent("Weight (lbs)") {
-                    TextField("0", text: $weight).keyboardType(.decimalPad).multilineTextAlignment(.trailing)
+                    TextField("0", text: $weight).focused($focusedField, equals: .weight).keyboardType(.decimalPad).modifier(NumberFieldStyle())
                 }
             } header: { Text("Best Load") }
 
         default:
             Section("Score") {
-                TextField("Score / notes", text: $notes)
+                TextField("Score / notes", text: $notes).focused($focusedField, equals: .notes)
             }
         }
+    }
+
+    /// Only time scores have a seconds field; 0–59 is the valid range.
+    private var secondsAreInvalid: Bool {
+        [.forTime, .rft, .chipper].contains(workout.workoutType) && (Int(seconds) ?? 0) > 59
+    }
+
+    private func dismissKeyboard() {
+        focusedField = nil
     }
 
     private func save() {
@@ -166,7 +192,7 @@ struct LogWorkoutResultView: View {
             repsInt = Int(reps)
             scoreType = .rounds
         case .maxLoad, .strength, .complex:
-            weightDouble = Double(weight)
+            weightDouble = try? Double(weight, format: .number)
             scoreType = .weight
         default:
             scoreType = .reps

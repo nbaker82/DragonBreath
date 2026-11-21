@@ -63,6 +63,7 @@ final class LogLiftViewModel {
         guard let movement, let maxWeight = currentMaxWeight else { return "" }
         return LiftFilterLogic.percentileLabel(
             weight: maxWeight,
+            unit: unit,
             movementID: movement.id,
             logs: logs
         )

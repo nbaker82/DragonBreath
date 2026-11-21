@@ -20,7 +20,7 @@ struct LiftLogDetailView: View {
                         Spacer()
 
                         if let w = set.weight {
-                            Text("\(Int(w)) \(log.unit.rawValue)")
+                            Text("\(w.formatted()) \(log.unit.rawValue)")
                                 .font(.headline)
                                 .foregroundStyle(Color.brand)
                         }
@@ -40,7 +40,7 @@ struct LiftLogDetailView: View {
 
             if let max = log.maxWeight {
                 Section("Session Stats") {
-                    LabeledContent("Max Weight", value: "\(Int(max)) \(log.unit.rawValue)")
+                    LabeledContent("Max Weight", value: "\(max.formatted()) \(log.unit.rawValue)")
                     LabeledContent("Total Volume", value: "\(Int(log.totalVolume)) \(log.unit.rawValue)")
                     LabeledContent("Sets Completed", value: "\(log.sets.count)")
                 }
@@ -65,7 +65,7 @@ struct LiftLogDetailView: View {
                                     .foregroundStyle(.secondary)
                                 Spacer()
                                 if let max = histLog.maxWeight {
-                                    Text("\(Int(max)) \(histLog.unit.rawValue)")
+                                    Text("\(max.formatted()) \(histLog.unit.rawValue)")
                                         .font(.subheadline)
                                         .foregroundStyle(histLog.id == log.id ? Color.brand : .primary)
                                 }

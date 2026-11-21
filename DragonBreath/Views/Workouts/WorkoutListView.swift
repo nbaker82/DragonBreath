@@ -72,7 +72,7 @@ struct WorkoutRowView: View {
                     .padding(.horizontal, 8)
                     .padding(.vertical, 2)
                     .background(workout.workoutType.themeColor.opacity(0.18))
-                    .foregroundStyle(workout.workoutType.themeColor)
+                    .foregroundStyle(.primary)
                     .clipShape(Capsule())
             }
 

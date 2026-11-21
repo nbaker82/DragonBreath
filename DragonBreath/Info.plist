@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Privacy - Photo Library Additions Usage Description </key>
-	<string>Need to add app icon to photos</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>DragonBreath saves the exported app icon to your photo library.</string>
 </dict>
 </plist>

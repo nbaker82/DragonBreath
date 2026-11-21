@@ -4,6 +4,7 @@ import UniformTypeIdentifiers
 struct BTWBImportView: View {
     @Environment(WorkoutRepository.self) private var workoutRepo
     @Environment(LiftRepository.self) private var liftRepo
+    @Environment(\.dismiss) private var dismiss
     @State private var vm = BTWBImportViewModel()
 
     var body: some View {
@@ -53,7 +54,7 @@ struct BTWBImportView: View {
                         .padding(.vertical, 8)
                     }
                     .foregroundStyle(.white)
-                    .listRowBackground(Color.brand)
+                    .listRowBackground(Color.brandFill)
                     .disabled(vm.isProcessing)
                 }
 
@@ -71,6 +72,10 @@ struct BTWBImportView: View {
                             }
                             if result.workoutsImported == 0 && result.liftsImported == 0 {
                                 Label("No new data found in file", systemImage: "info.circle")
+                                    .foregroundStyle(.secondary)
+                            }
+                            if result.duplicatesSkipped > 0 {
+                                Label("\(result.duplicatesSkipped) already-imported rows skipped", systemImage: "arrow.triangle.2.circlepath")
                                     .foregroundStyle(.secondary)
                             }
                         } else {
@@ -93,6 +98,11 @@ struct BTWBImportView: View {
                 }
             }
             .navigationTitle("btwb Import")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Done") { dismiss() }
+                }
+            }
             .fileImporter(
                 isPresented: $vm.showFilePicker,
                 allowedContentTypes: [UTType.commaSeparatedText, UTType.plainText],
@@ -127,7 +137,7 @@ struct InstructionRow: View {
                 .font(.caption.bold())
                 .foregroundStyle(.white)
                 .frame(width: 22, height: 22)
-                .background(Color.brand)
+                .background(Color.brandFill)
                 .clipShape(Circle())
 
             Text(text)

@@ -103,6 +103,9 @@ struct RankCardView: View {
     let workoutCount: Int
     let liftCount: Int
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+    private var isLarge: Bool { dynamicTypeSize.isAccessibilitySize }
+
     private var totalSessions: Int { workoutCount + liftCount }
     private var rank: FitnessRank { FitnessRank.rank(for: totalSessions) }
 
@@ -120,8 +123,10 @@ struct RankCardView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            // Header row
-            HStack(alignment: .center, spacing: 14) {
+            // Header row — badge beside the text normally, above it at accessibility sizes
+            (isLarge
+                ? AnyLayout(VStackLayout(alignment: .leading, spacing: 12))
+                : AnyLayout(HStackLayout(alignment: .center, spacing: 14))) {
                 // Animal badge
                 ZStack {
                     Circle()
@@ -179,8 +184,11 @@ struct RankCardView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
 
-                Spacer()
+                if !isLarge {
+                    Spacer()
+                }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 16)
             .padding(.top, 16)
             .padding(.bottom, 12)
@@ -188,25 +196,30 @@ struct RankCardView: View {
             Divider().padding(.horizontal, 16)
 
             // Stats row
-            HStack(spacing: 0) {
+            (isLarge
+                ? AnyLayout(VStackLayout(spacing: 8))
+                : AnyLayout(HStackLayout(spacing: 0))) {
                 RankStatCell(value: "\(totalSessions)", label: "Total Sessions")
-                Divider().frame(height: 36)
+                if !isLarge { Divider().frame(height: 36) }
                 RankStatCell(value: "\(workoutCount)", label: "Workouts")
-                Divider().frame(height: 36)
+                if !isLarge { Divider().frame(height: 36) }
                 RankStatCell(value: "\(liftCount)", label: "Lifts")
             }
             .padding(.vertical, 10)
+            .padding(.horizontal, isLarge ? 16 : 0)
 
             // Progress bar
             if let nextRank = rank.next, let remaining = sessionsToNext {
                 Divider().padding(.horizontal, 16)
 
                 VStack(alignment: .leading, spacing: 8) {
-                    HStack {
+                    (isLarge
+                        ? AnyLayout(VStackLayout(alignment: .leading, spacing: 4))
+                        : AnyLayout(HStackLayout())) {
                         Text("Progress to \(nextRank.emoji) \(nextRank.displayName)")
                             .font(.caption.weight(.medium))
                             .foregroundStyle(.secondary)
-                        Spacer()
+                        if !isLarge { Spacer() }
                         Text("\(remaining) sessions to go")
                             .font(.caption)
                             .foregroundStyle(.secondary)
@@ -272,14 +285,30 @@ private struct RankStatCell: View {
     let value: String
     let label: String
 
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
+
     var body: some View {
-        VStack(spacing: 2) {
-            Text(value)
-                .font(.title3.bold())
-            Text(label)
-                .font(.caption2)
-                .foregroundStyle(.secondary)
+        // Column inside the three-across row; label-left / value-right row when stacked.
+        if dynamicTypeSize.isAccessibilitySize {
+            HStack(alignment: .firstTextBaseline) {
+                Text(label)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                Spacer(minLength: 8)
+                Text(value)
+                    .font(.title3.bold())
+            }
+            .accessibilityElement(children: .combine)
+        } else {
+            VStack(spacing: 2) {
+                Text(value)
+                    .font(.title3.bold())
+                Text(label)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .frame(maxWidth: .infinity)
+            .accessibilityElement(children: .combine)
         }
-        .frame(maxWidth: .infinity)
     }
 }

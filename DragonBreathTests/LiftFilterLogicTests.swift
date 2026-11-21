@@ -8,6 +8,7 @@ private struct StubLiftLog: LiftLoggable {
     var movementName: String?
     var date: Date
     var maxWeight: Double?
+    var unit: WeightUnit = .lbs
 }
 
 // MARK: - Tests
@@ -21,9 +22,10 @@ final class LiftFilterLogicTests: XCTestCase {
         movementID: UUID? = nil,
         movementName: String? = nil,
         date: Date = Date(),
-        maxWeight: Double? = nil
+        maxWeight: Double? = nil,
+        unit: WeightUnit = .lbs
     ) -> StubLiftLog {
-        StubLiftLog(movementID: movementID, movementName: movementName, date: date, maxWeight: maxWeight)
+        StubLiftLog(movementID: movementID, movementName: movementName, date: date, maxWeight: maxWeight, unit: unit)
     }
 
     // MARK: Movement ID filter
@@ -182,5 +184,26 @@ final class LiftFilterLogicTests: XCTestCase {
         // Only 1 squat log → "First Log!"
         let label = LiftFilterLogic.percentileLabel(weight: 135, movementID: squat, logs: logs)
         XCTAssertEqual(label, "First Log!")
+    }
+
+    // MARK: Mixed units
+
+    func test_personalBest_convertsKilogramsToPounds() {
+        let logs = [
+            makeLog(movementID: squat, maxWeight: 225),             // lbs
+            makeLog(movementID: squat, maxWeight: 120, unit: .kg)   // ≈ 264.6 lbs
+        ]
+        let pb = LiftFilterLogic.personalBest(movementID: squat, in: logs)
+        XCTAssertEqual(pb ?? 0, 120 * 2.20462, accuracy: 0.01)
+    }
+
+    func test_percentileLabel_comparesAcrossUnits() {
+        let logs = [
+            makeLog(movementID: squat, maxWeight: 100, unit: .kg),  // ≈ 220 lbs
+            makeLog(movementID: squat, maxWeight: 185)
+        ]
+        // 200 lbs is below the 100 kg lift, so it must not be reported as a PR.
+        let label = LiftFilterLogic.percentileLabel(weight: 200, unit: .lbs, movementID: squat, logs: logs)
+        XCTAssertNotEqual(label, "🏆 New PR!")
     }
 }

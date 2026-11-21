@@ -338,7 +338,7 @@ private struct EquipmentToggleCard: View {
             }
             .frame(maxWidth: .infinity, minHeight: 80)
             .padding(.vertical, 12)
-            .background(isSelected ? Color.brand : Color.brand.opacity(0.12))
+            .background(isSelected ? Color.brandFill : Color.brand.opacity(0.12))
             .clipShape(RoundedRectangle(cornerRadius: 14))
         }
         .buttonStyle(.plain)

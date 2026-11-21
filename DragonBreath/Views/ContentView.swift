@@ -2,6 +2,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        // Four tabs keeps everything on the iPhone tab bar (five or more spills into "More").
+        // One-off actions such as btwb import live in the Dashboard's options menu.
         TabView {
             DashboardView()
                 .tabItem {
@@ -21,17 +23,6 @@ struct ContentView: View {
             HistoryView()
                 .tabItem {
                     Label("History", systemImage: "chart.line.uptrend.xyaxis")
-                }
-
-            BTWBImportView()
-                .tabItem {
-                    Label("Import", systemImage: "square.and.arrow.down.fill")
-                }
-
-            // TEMP: remove after exporting the app icon
-            AppIconExportView()
-                .tabItem {
-                    Label("Icon", systemImage: "app.fill")
                 }
         }
         .tint(Color.brand)

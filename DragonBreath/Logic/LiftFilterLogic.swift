@@ -8,6 +8,13 @@ protocol LiftLoggable {
     var movementName: String? { get }
     var date: Date { get }
     var maxWeight: Double? { get }
+    /// Unit that `maxWeight` was entered in.
+    var unit: WeightUnit { get }
+}
+
+extension LiftLoggable {
+    /// Max weight normalized to pounds so logs in different units compare correctly.
+    var maxWeightLbs: Double? { maxWeight.map { unit.convert($0, to: .lbs) } }
 }
 
 // MARK: - Pure Logic
@@ -45,18 +52,25 @@ enum LiftFilterLogic {
         return result.sorted { $0.date > $1.date }
     }
 
-    /// Returns the personal-best max weight for a movement across all logs.
+    /// Returns the personal-best max weight (in pounds) for a movement across all logs.
     static func personalBest<L: LiftLoggable>(movementID: UUID, in logs: [L]) -> Double? {
         logs.filter { $0.movementID == movementID }
-            .compactMap { $0.maxWeight }
+            .compactMap { $0.maxWeightLbs }
             .max()
     }
 
     /// Human-readable percentile label for a given weight vs historical logs.
-    static func percentileLabel<L: LiftLoggable>(weight: Double, movementID: UUID, logs: [L]) -> String {
+    /// `weight` is expressed in `unit`; historical logs are converted so units never mix.
+    static func percentileLabel<L: LiftLoggable>(
+        weight: Double,
+        unit: WeightUnit = .lbs,
+        movementID: UUID,
+        logs: [L]
+    ) -> String {
+        let weight = unit.convert(weight, to: .lbs)
         let allMaxes = logs
             .filter { $0.movementID == movementID }
-            .compactMap { $0.maxWeight }
+            .compactMap { $0.maxWeightLbs }
 
         guard allMaxes.count > 1 else { return "First Log!" }
 
